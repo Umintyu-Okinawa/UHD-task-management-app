@@ -1,13 +1,13 @@
- README（ローカルセットアップ手順だけ版）
+📘 README（ローカルセットアップ手順だけ版）
 
 以下を README.md にそのまま貼れます👇
 
- ローカル環境でのセットアップ手順
+🚀 ローカル環境でのセットアップ手順
 
 このプロジェクトは Next.js / TypeScript / Supabase / Tailwind CSS を使用したタスク管理アプリです。
 以下の手順に従えば、ローカル環境で簡単に動作確認ができます。
 
- 1. 必要ツールのインストール
+🧱 1. 必要ツールのインストール
 
 以下がインストールされていることを確認してください：
 
@@ -18,15 +18,15 @@ npm（Node.js に同梱）
 
 Git（任意）
 
- 2. リポジトリをクローン
+📦 2. リポジトリをクローン
 git clone https://github.com/Umintyu-Okinawa/your-repository.git
 
 cd your-repository
 
-3. パッケージをインストール
+📁 3. パッケージをインストール
 npm install
 
- 4. 環境変数(.env.local)を作成
+🔑 4. 環境変数(.env.local)を作成
 
 プロジェクト直下に .env.local を作成し、以下を記述してください。
 
@@ -44,7 +44,7 @@ npm run dev
 
 http://localhost:3000
 
- 6. 動作確認
+🔍 6. 動作確認
 
 アプリで以下を確認できます：
 
@@ -60,7 +60,7 @@ http://localhost:3000
 
 プロフィールページ
 
- 7. Tailwind CSS の設定（確認用）
+📁 7. Tailwind CSS の設定（確認用）
 
 本プロジェクトは Tailwind が設定済みです。
 念のため確認したい場合は以下ファイルを参照してください。
@@ -71,7 +71,7 @@ postcss.config.js
 
 app/globals.css
 
-トラブルシューティング
+🧯 トラブルシューティング
 
 500エラー / Supabaseに接続できない
 → .env.local が正しいか確認
