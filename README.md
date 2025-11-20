@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📘 README（ローカルセットアップ手順だけ版）
 
-## Getting Started
+以下を README.md にそのまま貼れます👇
 
-First, run the development server:
+🚀 ローカル環境でのセットアップ手順
 
-```bash
+このプロジェクトは Next.js / TypeScript / Supabase / Tailwind CSS を使用したタスク管理アプリです。
+以下の手順に従えば、ローカル環境で簡単に動作確認ができます。
+
+🧱 1. 必要ツールのインストール
+
+以下がインストールされていることを確認してください：
+
+Node.js（18以上推奨）
+https://nodejs.org/
+
+npm（Node.js に同梱）
+
+Git（任意）
+
+📦 2. リポジトリをクローン
+git clone https://github.com/Umintyu-Okinawa/your-repository.git
+
+cd your-repository
+
+📁 3. パッケージをインストール
+npm install
+
+🔑 4. 環境変数(.env.local)を作成
+
+プロジェクト直下に .env.local を作成し、以下を記述してください。
+
+NEXT_PUBLIC_SUPABASE_URL=あなたのSupabaseのURL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=あなたのAnonKey
+
+
+※ Supabase Dashboard → 「Project Settings → API」から取得できます。
+
+🛠 5. 開発サーバーを起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+以下のURLにアクセスするとアプリが起動します：
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🔍 6. 動作確認
 
-To learn more about Next.js, take a look at the following resources:
+アプリで以下を確認できます：
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ユーザー登録（サインアップ）
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ログイン／ログアウト
 
-## Deploy on Vercel
+タスク追加
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+タスク一覧表示
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+タスク削除
+
+プロフィールページ
+
+📁 7. Tailwind CSS の設定（確認用）
+
+本プロジェクトは Tailwind が設定済みです。
+念のため確認したい場合は以下ファイルを参照してください。
+
+tailwind.config.js
+
+postcss.config.js
+
+app/globals.css
+
+🧯 トラブルシューティング
+
+500エラー / Supabaseに接続できない
+→ .env.local が正しいか確認
+→ サーバー再起動（npm run dev）
+
+スタイルが反映されない
+→ tailwind.config.js の content が正しいことを確認：
+
+content: ["./app/**/*.{js,ts,jsx,tsx}"],
